@@ -1,0 +1,23 @@
+extends layout
+
+block styles
+    link(rel='stylesheet', href='/stylesheets/bootstrap.slider.min.css')
+
+block content
+    h1 #{title}
+    div(class='row')
+        div(class='col-md-6')
+            div(class='form-group')
+                div(class='btn-group btn-group-justified', role='group', aria-label='...')                
+                    a(id='randAnim', href='#', class='btn btn-success anims', role='button')='Animator'
+                    a(id='rowColor', href='#', class='btn btn-info anims', role='button')='RowColor'
+                    a(id='re-setter', href='#', class='btn btn-warning', role='button')='Reset'
+        div(class='col-md-6')
+            div(class='form-group')
+                label(for='fpsSetting')='Fps:'
+                input(id='fpsSetting' data-slider-id='ex1Slider' type='text' data-slider-min='0.1' data-slider-max='100' data-slider-step='0.1' data-slider-value='33')
+    div(class='row')
+        div(class='col-md-12', id='animDescription')
+block scripts
+    script(src='/javascripts/bootstrap.slider.min.js')
+    script(src='/javascripts/pages/animator.js')
