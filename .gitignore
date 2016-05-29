@@ -1,0 +1,4 @@
+# No "Visual Studio Code" project settings
+.vscode/
+# No node.js installed modules
+node_modules/
